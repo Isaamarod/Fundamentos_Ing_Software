@@ -1,0 +1,71 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->  
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="surname">
+    <th mat-header-cell *matHeaderCellDef> Apellidos </th>
+    <td mat-cell *matCellDef="let element"> {{element.surname}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef> DNI </th>
+    <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="titulation">
+    <th mat-header-cell *matHeaderCellDef> Titulacion </th>
+    <td mat-cell *matCellDef="let element"> {{element.titulation}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="center">
+    <th mat-header-cell *matHeaderCellDef> Centro </th>
+    <td mat-cell *matCellDef="let element"> {{element.center}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cientific_area">
+    <th mat-header-cell *matHeaderCellDef> Área científico técnica </th>
+    <td mat-cell *matCellDef="let element"> {{element.cientific_area}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="department">
+    <th mat-header-cell *matHeaderCellDef> Departamento </th>
+    <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="responsable">
+    <th mat-header-cell *matHeaderCellDef> Responsable </th>
+    <td mat-cell *matCellDef="let element">
+        <p *ngIf='!responsable; else elsecond;'>
+            <i class="material-icons green">check_circle</i>
+            <ng-template #elsecond>
+             <i class="material-icons orange">visibility</i>
+            </ng-template>
+        </p> 
+    </td>
+  <!--  <td mat-cell *matCellDef="let element"> {{element.responsable}} </td>-->
+  </ng-container>
+
+  <ng-container matColumnDef="active" *ngIf="!active; else elseone;">
+    <th mat-header-cell *matHeaderCellDef> Activo </th>
+    <td mat-cell *matCellDef="let element">
+        <i class="material-icons green">check_circle</i>        
+    </td>
+  </ng-container>
+  <ng-template #elseone>
+      <i class="material-icons orange">visibility</i>
+  </ng-template>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+

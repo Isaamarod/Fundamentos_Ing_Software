@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Material Design Profile</title>
+        <link href='https://fonts.googleapis.com/css?family=Passion+One|Roboto+Condensed:400,300,700|Roboto:400,300,500' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+     
+    <body ng-app="mdApp">
+        <section ngController="mdController as Ctrl">
+            <ul>
+                <li ng-repeat="user in Ctrl.users">
+                    <a>
+                        <div class="imageWrapper">
+                            <img src="{{user.avatar}}" />
+                        </div>
+                         
+                        <div class="info">
+                            <h3>{{user.name}}</h3>
+                            <p>{{user.title}}</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+         
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script type="text/javascript" src="md.module.js"></script>
+        <script type="text/javascript" src="md.module.js"></script>
+        <script type="text/jacascript" src="md.api.js"></script>
+        <script type="text/javascript" src="md.controller.js"></script>
+    </body>
+</html>
