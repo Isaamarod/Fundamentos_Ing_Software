@@ -1,0 +1,91 @@
+Request: 
+
+GET /contacts 
+
+ 
+
+Response: 
+
+200 OK 
+
+[ 
+
+    {"name": "juan", "phone": 7777}, 
+
+    {"name": "luis", "phone": 7777} 
+
+] 
+
+ 
+
+Request: 
+
+POST /contacts 
+
+{"name": "jaime", "phone": 6666} 
+
+ 
+
+Response: 
+
+201 Created 
+
+ 
+
+ 
+
+Request: 
+
+DELETE /contacts 
+
+ 
+
+Response: 
+
+200 OK 
+
+ 
+
+ 
+
+Request: 
+
+GET /contacts/{id} 
+
+ 
+
+Response: 
+
+200 OK 
+
+{"name": "juan", "phone": 7777} 
+
+ 
+
+ 
+
+Request: 
+
+PUT /contacts/{id} 
+
+{"name": "juan", "phone": 7887} 
+
+ 
+
+Response: 
+
+200 OK 
+
+ 
+
+ 
+
+Request: 
+
+DELETE /contacts/{id} 
+
+ 
+
+Response: 
+
+200 OK 

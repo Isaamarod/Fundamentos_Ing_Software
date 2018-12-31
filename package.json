@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "_comment": "start ng serve para cuando web",
+    "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,11 +22,14 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^3.4.0",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
     "faker": "^4.1.0",
     "lodash": "^4.17.11",
     "material-design-icons": "^3.0.1",
+    "nedb": "^1.8.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
@@ -50,5 +54,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.6"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isaamarod/Fundamentos_Ing_Software.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Isaamarod/Fundamentos_Ing_Software/issues"
+  },
+  "homepage": "https://github.com/Isaamarod/Fundamentos_Ing_Software#readme"
 }
